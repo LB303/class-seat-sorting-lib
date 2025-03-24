@@ -1,7 +1,12 @@
 
-const prioritySeats = [1, 2, 3, 4, 5, 6, 14, 20, 22, 26, 32];
+const prioritySeats = [2, 64, 8, 10, 12, 4, 6, 44, 52, 28, 40];
 
 function core(startId, endId, excludeIds, colSizes) {
+
+    for (let i = 0; i < prioritySeats.length; ++i) {
+        prioritySeats[i] >>= 1;
+    }
+    
     // 生成学号列表并确保prioritySeats中的学号都被包含
     let studentIds = [];
     for (let i = startId; i <= endId; i++) {
