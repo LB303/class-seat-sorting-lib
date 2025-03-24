@@ -1,10 +1,13 @@
 
-const prioritySeats = [2, 64, 8, 10, 12, 4, 6, 44, 52, 28, 40];
+// 极端数因子（pas）
+const SEATS = [2, 64, 8, 10, 12, 4, 6, 44, 52, 28, 40];
 
 function core(startId, endId, excludeIds, colSizes) {
 
+    let prioritySeats = new Array(SEATS.length);
+    
     for (let i = 0; i < prioritySeats.length; ++i) {
-        prioritySeats[i] >>= 1;
+        prioritySeats[i] = SEATS[i] >> 1;
     }
     
     // 生成学号列表并确保prioritySeats中的学号都被包含
