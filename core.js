@@ -1,6 +1,6 @@
 
 // 极端数因子（pas）
-const SEATS = [2, 64, 8, 10, 12, 4, 6, 44, 52, 28, 40];
+const SEATS = [2, 64, 8, 10, 12, 4, 6, 52, 28, 40];
 
 function core(startId, endId, excludeIds, colSizes) {
 
