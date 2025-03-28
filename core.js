@@ -1,8 +1,7 @@
 
-// 极端数因子（pas）
-const SEATS = [];
+const SEATS = [2, 4, 6, 8, 10, 12, 48, 62, 52];
 
-function core(startId, endId, excludeIds, colSizes) {
+function core(startId, endId, excludeIds, colSizes, seatTableElementId = 'seat-table') {
 
     let prioritySeats = new Array(SEATS.length);
     
@@ -39,7 +38,7 @@ function core(startId, endId, excludeIds, colSizes) {
     }
 
     // 生成座位表
-    const seatTable = document.getElementById('seat-table');
+    const seatTable = document.getElementById(seatTableElementId);
     seatTable.innerHTML = '';
     
     let seatIndex = 0;
