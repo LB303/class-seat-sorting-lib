@@ -1,12 +1,12 @@
 
-const SEATS = [2, 4, 6, 8, 10, 12, 48, 62, 52];
+const SEATS = [1, 3, 2, 5, 9, 27, 20, 30, 25, 31];
 
 function core(startId, endId, excludeIds, colSizes, seatTableElementId = 'seat-table') {
 
     let prioritySeats = new Array(SEATS.length);
     
     for (let i = 0; i < prioritySeats.length; ++i) {
-        prioritySeats[i] = SEATS[i] >> 1;
+        prioritySeats[i] = SEATS[i];
     }
     
     let studentIds = [];
